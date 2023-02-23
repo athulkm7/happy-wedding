@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Login & Registration Form</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{% static 'login/style.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="cont">
+    <div class="form sign-in">
+      <form action="{% url 'custemerlogin' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+      <h2>Log In</h2>
+      <label>
+        <span>Name</span>
+        <input type="text" name="name">
+      </label>
+      <label>
+        <span>Password</span>
+        <input type="password" name="password">
+      </label>
+      <button class="submit" type="submit">LOG In</button>
+      </form>
+
+
+      <div class="social-media">
+<!--        <ul>-->
+<!--          <li><img src="images/facebook.png"></li>-->
+<!--          <li><img src="images/twitter.png"></li>-->
+<!--          <li><img src="images/linkedin.png"></li>-->
+<!--          <li><img src="images/instagram.png"></li>-->
+<!--        </ul>-->
+      </div>
+    </div>
+
+    <div class="sub-cont">
+      <div class="img">
+        <div class="img-text m-up">
+          <h1>New here?</h1>
+          <p>sign up and discover</p>
+        </div>
+        <div class="img-text m-in">
+          <h1>One of us?</h1>
+          <p>just Log in</p>
+        </div>
+        <div class="img-btn">
+          <span class="m-up">Sign Up</span>
+          <span class="m-in">Log In</span>
+        </div>
+      </div>
+      <div class="form sign-up">
+        <form action="{% url 'saveloginpg' %}" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+        <h2>Sign Up</h2>
+        <label>
+          <span>Name</span>
+          <input type="text" name="name">
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email">
+        </label>
+        <label>
+          <span>Password</span>
+          <input type="password" name="password">
+        </label>
+        <label>
+          <span>Confirm Password</span>
+          <input type="password" name="password1">
+        </label>
+
+
+        <button type="submit" class="submit" >Sign Up Now</button>
+          </form>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript" src="script.js"></script>
+
+<!--   sweatalert-->
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+   {% if messages %}
+  {% for message in messages %}
+   {% if message.tags == 'warning' %}
+
+	<script>
+     swal('{{message}}','','warning');
+</script>
+
+   {% elif message.tags == 'error' %}
+	<script>
+     swal('{{message}}','','error');
+</script>
+   {% else%}
+   <script>
+        swal('{{message}}','','success');
+   </script>
+   {% endif %}
+   {% endfor %} {% endif %}
+
+</body>
+<script>
+  document.querySelector('.img-btn').addEventListener('click', function()
+	{
+		document.querySelector('.cont').classList.toggle('s-signup')
+	}
+);
+
+</script>
+</html>

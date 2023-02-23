@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<title>Happy Wedding</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+
+	<link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<style type="text/css">.scrollax-performance, .scrollax-performance *, .scrollax-performance *:before, .scrollax-performance *:after { pointer-events: none !important; -webkit-animation-play-state: paused !important; animation-play-state: paused !important; };</style><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/51/6/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/51/6/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/51/6/stats.js"></script></head>
+<body>
+
+	<div id="colorlib-page">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="js-fullheight" style="height: 730px;">
+
+			<h1 id="colorlib-logo" class="mb-4 mb-md-5"><a href="index.html" style="background-image: url({% static 'images/bg_1.jpg' %});"><h2>Happy Wedding</h2></a></h1>
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+					<li><a href="{% url 'indexpg' %}">Home</a></li>
+					<li><a href="{% url 'gallerypg' %}">Gallery</a></li>
+					<li class="colorlib-active"><a href="{% url 'aboutpg' %}">About</a></li>
+					<li><a href="{% url 'pricingpg' %}">Pricing</a></li>
+					<li><a href="{% url 'bookingpg' %}">Booking</a></li>
+					<li><a href="{% url 'contactpg' %}">Contact</a></li>
+				</ul>
+			</nav>
+
+			<div class="colorlib-footer">
+				<li class="active-menu">
+						{% if request.session.name %}
+                    <i class="fa fa-user me-sm-1"></i>&nbsp;&nbsp;<b>{{request.session.name}}</b>
+						{% endif %}
+			</li>
+				<div class="col-md-12">
+<!--					<div class="form-group">-->
+<!--						<div><a href="{% url 'loginpg' %}" class="btn-custom">-->
+<!--						<input type="button" value="LOGIN & SIGNUP" class="btn btn-primary">-->
+<!--						</a>-->
+<!--							</div>-->
+<!--					</div>-->
+				</div>
+<!--				<div class="mb-4">-->
+<!--					<h3>Subscribe for newsletter</h3>-->
+<!--					<form action="#" class="colorlib-subscribe-form">-->
+<!--						<div class="form-group d-flex">-->
+<!--							<div class="icon"><span class="icon-paper-plane"></span></div>-->
+<!--							<input type="text" class="form-control" placeholder="Enter Email Address">-->
+<!--						</div>-->
+<!--					</form>-->
+<!--				</div>-->
+				<p class="pfooter"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					HappyWedding &copy;<script>document.write(new Date().getFullYear());</script> It's not just a Photography It's all about capturing a Moments... <i class="fa fa-heart" aria-hidden="true"></i> by <a href="#" target="_blank">HappyWedding.com</a>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+				</div>
+			</aside> <!-- END COLORLIB-ASIDE -->
+			<div id="colorlib-main">
+				<section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
+					<div class="container-fluid px-0">
+						<div class="row d-flex">
+							<div class="col-md-6 d-flex">
+								<div class="img d-flex align-self-stretch align-items-center js-fullheight" style="background-image: url(&quot;{% static 'images/HPY06567 (1).jpg' %}&quot;); height: 730px;">
+								</div>
+							</div>
+							<div class="col-md-6 d-flex align-items-center">
+								<div class="text px-4 pt-5 pt-md-0 px-md-4 pr-md-5 ftco-animate fadeInUp ftco-animated">
+									<h2 class="mb-4">Hello! I'm<span>Athul km</span> the CEO of a Happy Wedding Photography</h2>
+									<p>I'M A PHOTOGRAPHER I VIEW THE WORLD IN A DIFFERENT LIGHT I STUDY THIS ART EVERY DAY & NIGHT I CAPTURE MOMENTS THAT PEOPLE WILL TREASURE THE JOY IT BRINGS ME, I CAN NOT MEASURE SUNRISES AND SUNSETS WILL COME AND GO THE MEMORIES WITH MY CLIENTS I'LL NEVER FORGO LONG DAYS OF SHOOTING KEEP ME BUSY TIRING NIGHTS OF EDITING PUT ME IN A TIZZY BUT THERE'S NOTHING I WOULD CHANGE,I LOVE EVERY BIT PHOTOGRAPHY IS MY PASSION AND I LOVE IT</p>
+									<div class="team-wrap row mt-4">
+										<div class="col-md-4 team">
+											<div class="img" style="background-image: url({% static 'images/photo_6305441745411880866_y.jpg' %});"></div>
+											<h3>Bilall</h3>
+											<span>Photographer</span>
+										</div>
+										<div class="col-md-4 team">
+											<div class="img" style="background-image: url({% static 'images/photo_6305441745411880867_y.jpg' %});"></div>
+											<h3>Sreehari</h3>
+											<span>Photographer</span>
+										</div>
+										<div class="col-md-4 team">
+											<div class="img" style="background-image: url({% static 'images/photo_6305441745411880868_y.jpg' %});"></div>
+											<h3>Shuhaife</h3>
+											<span>Photographer</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div><!-- END COLORLIB-MAIN -->
+		</div><!-- END COLORLIB-PAGE -->
+
+		<!-- loader -->
+		<div id="ftco-loader" class="fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"></circle><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"></circle></svg></div>
+
+
+		<script src="{% static 'js/jquery.min.js' %}"></script>
+		<script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+		<script src="{% static 'js/popper.min.js' %}"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+		<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+		<script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+		<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+		<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+		<script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+		<script src="{% static 'js/scrollax.min.js' %}"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp;sensor=false"></script>
+		<script src="{% static 'js/google-map.js' %}"></script>
+		<script src="{% static 'js/main.js' %}"></script>
+
+
+	</body>
+</html>
